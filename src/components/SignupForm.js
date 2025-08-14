@@ -1,9 +1,10 @@
-import "./App.css";
+// src/components/SignupForm.js
+import React from "react";
+import Navbar from "./Navbar";
+import FormField from "./FormField";
 import "bulma/css/bulma.css";
-import Navbar from "./components/Navbar";
-import FormField from "./components/FormField";
 
-function App() {
+function SignupForm() {
   return (
     <div>
       {/* Navbar at the top */}
@@ -23,17 +24,13 @@ function App() {
           />
           <FormField label="Password" type="password" placeholder="********" />
 
-          <div className="field is-grouped is-grouped-right">
-            <div className="control">
-              <button type="submit" className="button is-primary">
-                Sign Up
-              </button>
-            </div>
-          </div>
+          <CoolButton isPrimary type="submit">
+            Sign Up
+          </CoolButton>
         </form>
       </div>
     </div>
   );
 }
 
-export default App;
+export default SignupForm;
